@@ -84,7 +84,6 @@ input[type=number] {
   font-size: 30px;
   font-weight: 500;
   color: #fff;
-  height: 41px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -93,6 +92,12 @@ input[type=number] {
   text-transform: capitalize;
   transform: perspective(1px);
   margin: 0;
+}
+html[dir=rtl] .sec-title {
+  height: 46px;
+}
+html[dir=ltr] .sec-title {
+  height: 41px;
 }
 @media (max-width: 991px) {
   .sec-title {
@@ -743,14 +748,24 @@ header.fixed .logo {
   background-position: top center;
   background-size: cover;
   overflow: hidden;
-  background-image: url(../images/hero/bg.jpg);
+}
+html[dir=rtl] .main-section {
+  background-image: url(../images/hero/bg-ar.jpg);
+}
+html[dir=ltr] .main-section {
+  background-image: url(../images/hero/bg-en.jpg);
 }
 @media (max-width: 767px) {
   .main-section {
     position: relative;
     box-shadow: 0px 10px 90px rgba(0, 0, 0, 0.0705882353);
-    background-image: none;
     transform: perspective(1px);
+  }
+  html[dir=rtl] .main-section {
+    background-image: none;
+  }
+  html[dir=ltr] .main-section {
+    background-image: none;
   }
 }
 .main-section .pattern {

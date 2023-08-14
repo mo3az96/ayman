@@ -18,7 +18,7 @@ $(document).ready(function () {
     target: "#fixedNavbar",
   });
 
-  $("#fixedNavbar ul li a[href^='#']").on("click", function (e) {
+  $("#fixedNavbar ul li a[href^='#'],.main-btn").on("click", function (e) {
     e.preventDefault();
     var hash = this.hash;
     $("html, body").animate(
